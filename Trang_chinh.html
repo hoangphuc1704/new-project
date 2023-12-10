@@ -1,286 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-        #header{
-            display:flex;
-        }
-        #header .slide_in_left{
-            flex-basis: 20%;
-            background-color:#383838;
-            height: 102vh;
+        #header {
+            display: flex;
         }
 
-    
-        #header .slide_in_left .manage{
-            color:antiquewhite;
-            font-size:24px;
-            font-weight: 700;
-            padding-left:10px;
-            padding-top:8px;
+        #header .slide_in_left {
+            flex-basis: 20%;
+            background-color: #383838;
+            height: 107vh;
         }
-        #header .nav{
+
+
+        #header .slide_in_left .manage {
+            color: antiquewhite;
+            font-size: 24px;
+            font-weight: 700;
+            padding-left: 10px;
+            padding-top: 8px;
+        }
+
+        #header .nav {
             padding-left: 20px;
-            display:flex;
+            display: flex;
             color: white;
-            font-size:18px;
+            font-size: 18px;
             font-weight: 500;
             padding-top: 20px;
         }
 
 
-        #header .slide_in_right{
+        #header .slide_in_right {
             flex-basis: 80%;
             height: 10vh;
             background-color: #D3D3D3;
         }
-        #header .slide_in_right{
+
+        #header .slide_in_right {
             display: flex;
-            padding-top: 10px;
+            padding-top: 5px;
             padding-left: 50px;
-            
-        }
-        #header .slide_in_right .student{
-            flex-basis: 50%;
-            padding-left: 10px;
-            font-size: 18px;
-            font-weight: 500;
-        }
-        #header .slide_in_right .teacher{
-            flex-basis: 50%;
-            padding-left: 50px;
-            font-size: 18px;
-            font-weight: 500;
-    
+
         }
 
-        a{
+        #header .slide_in_right .student {
+            flex-basis: 50%;
+            padding-left: 15px;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        #header .slide_in_right .teacher {
+            padding-top: 35px;
+            flex-basis: 50%;
+            padding-left: 40px;
+            font-size: 18px;
+            font-weight: 500;
+
+        }
+
+        a {
             text-decoration: none;
             color: black;
         }
 
-        #header .slide_in_right .img{
-            padding-top: 50px;
-            padding-left: 20px;
+        #header .slide_in_right .img {
+            padding-top: 1px;
+            padding-left: 10px;
         }
-        #header .slide_in_right .thongbao{
+
+        #header .slide_in_right .thongbao {
             padding-top: 40px;
         }
-        #header .carousel-inner .carousel-item {
-            padding-top: 50px;
-        }
-        #header .slide_in_right .info{
-            background-color: 	#DCDCDC;
-            font-size: 14px;
-            font-weight:600;
-            border:none;
-            border-radius:10px;
-            color:black
 
+        #header .carousel-inner .carousel-item {
+            padding-top: 20px;
         }
-        #header .rcm{
-            padding-left: 50px;
-            color:#8B0000;
-            font-size:18px;
+
+        #header .slide_in_right .info {
+            background-color: #DCDCDC;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            color: black
+        }
+
+        #header .rcm {
+            padding-left: 20px;
+            color: #8B0000;
+            font-size: 14px;
             background-color: #FFFAFA;
             border: none;
             border-radius: 10px;
             font-weight: 700;
         }
-        #plot{
-            display:flex;
-            padding-top:50px;
+
+        #plot {
+            display: flex;
+            padding-top: 50px;
         }
-        #plot .plot_left{
+
+        #plot .plot_left {
             padding-left: 20px;
-            flex-basis: 70%;
+            flex-basis: 50%;
         }
-        #plot .plot-right{
+
+        #plot .plot-right {
             padding-left: 20px;
-            flex-basis: 30%;
+            flex-basis: 50%;
         }
-        #plot .hist{
-            padding-top:10px;
+
+        #plot .hist {
+            padding-top: 10px;
             padding-left: 80px;
         }
+
         .feedback-section {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
-}
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
 
-.feedback-section h2 {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
+        .feedback-section h2 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
 
-.feedback-form {
-  width: 100%;
-}
+        .feedback-form {
+            width: 100%;
+        }
 
-.form-group {
-  margin-bottom: 20px;
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
-.form-group textarea {
-  height: 120px;
-}
+        .form-group textarea {
+            height: 200px;
+        }
 
-input[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #header .btn-group {
+            padding-top: 40px;
+            width: 200px;
+            height: 100px;
+        }
+
+        #header .btn-group .head {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .btn btn-danger dropdown-toggle {
+            background-color: #8B0000;
+        }
+
+        .announcement {
+            font-size: 14px;
+            position: relative;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .text {
+            position: relative;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #footer {
+            background-color: #f5f5f5;
+        }
+
+        #logoutBtn{
+            background-color: #8B0000;
+            color: white;
+        }
     </style>
 
 </head>
 <body>
     <div id="header">
         <div class="slide_in_left">
-                <div class="manage">MANAGE STUDENT</div>
-                <div class="nav">Tổng quan</div> 
-                <div class="nav">Thời khóa biểu</div>
-                <div class="nav">Chương trình học</div>
-                <div class="nav">Bài giảng</div>
-                <div class="nav">Bài kiểm tra </div>
-                <div class="nav">Lớp học ảo</div>
-                <div class="nav">Kỳ thi</div>
-                <div class="nav">Kết quả học tập</div>
-                <div class="nav">Lịch sự kiện</div>
-                <div class="nav">Giáo viên</div>
-                <div class="nav">Hỗ trợ</div>
+            <div class="manage">MANAGE STUDENT</div>
+            <div class="nav">Tổng quan</div>
+            <div class="nav">Thời khóa biểu</div>
+            <div class="nav">Chương trình học</div>
+            <div class="nav">Bài giảng</div>
+            <div class="nav">Bài kiểm tra </div>
+            <div class="nav">Lớp học ảo</div>
+            <div class="nav">Kỳ thi</div>
+            <div class="nav">Kết quả học tập</div>
+            <div class="nav">Lịch sự kiện</div>
+            <div class="nav">Giáo viên</div>
+            <div class="nav">Hỗ trợ</div>
+            <div class="nav">   
+                    <p id="loggedInUser"><span id="username"></span></p>
+                    <button id="logoutBtn">Đăng Xuất</button>
+            </div>
         </div>
         <div class="slide_in_right">
-                <div class="student">
-                    <div><img src="images/hocsinh.png" alt="" width="40px"><a href="hocsinh.html">Học Sinh</a></div>
-                   <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="images/ad1.png" alt="" width="150px"  height="500px"   class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="images/ad2.png" width="100px" height="500px" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="images/ad3.png" width="100px" height="500px" class="d-block w-100" alt="...">
-        </div>
-    </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-                </div>
-                <div class="teacher">
-                    <div><img src="images/giaovien.png" alt="" width="40px"><a href="giaovien.html">Giáo Viên</a></div>
-                    <div class="thongbao">
-                        <div class="info">
-                            Bộ Giáo dục và Đào tạo cũng đã ban hành một số văn bản quy định mới về giáo dục, như:
-                    <ul>
-                        <li>Thông tư 01/2023/TT-BGDĐT quy định về đánh giá kết quả học tập, rèn luyện của học sinh THCS, THPT và GDTX.</li>
-                        <li>  Thông tư 02/2023/TT-BGDĐT quy định về quy trình tổ chức và quản lý thi tốt nghiệp trung học phổ thông.</li>
-                        <li>Thông tư 03/2023/TT-BGDĐT quy định về tiêu chuẩn, nhiệm vụ và quyền hạn của nhà giáo, viên chức quản lý giáo dục.</li>
-                    </ul>
-                    Lịch thi năm học 2022-2023 <br>
-                    Kỳ thi tuyển sinh vào lớp 10 trung học phổ thông
-                    <ul>
-                        <li>Ngày thi: 26, 27 tháng 6 năm 2023</li>
-                        <li>Ngày 26 tháng 6 năm 2023: Toán, Ngữ văn</li>
-                        <li>Ngày 27 tháng 6 năm 2023: Ngoại ngữ, Khoa học tự nhiên, Khoa học xã hội</li>
-                        <li>Kỳ thi tốt nghiệp trung học phổ thông</li>
+            <div class="student">
+                <div><a href="Trang_chinh.html">Trang chính</a></div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <div class="head">Giảng viên</div>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="k22.html">DTU1221</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                     </ul>
                 </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <div class="head">Sinh viên</div>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="lichthi.html">Thông báo</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                    </ul>
+                </div>
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/ad1.png" alt="" width="100px" height="480px" class="d-block w-100"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/ad2.png" width="100px" height="480px" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/ad3.png" width="100px" height="480px" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
-            <div class="image-container">
-                <div class="rcm">CÁC ỨNG DỤNG AI HỖ TRỢ VIỆC HỌC</div>
-                <div class="image"><img src="images/chatgpt.png" alt="" width="120px" height="100px">
-<img src="images/poeai.jpg" alt="" width="100px" height="100px">
-<img src="images/bardai.jpg" alt="" width="100px" height="100px"></div>
+            <div class="teacher">
+                <div class="thongbao">
+                    <div class="info">
+                        Bộ Giáo dục và Đào tạo cũng đã ban hành một số văn bản quy định mới về giáo dục, như:
+                        <ul>
+                            <li>Thông tư 01/2023/TT-BGDĐT quy định về đánh giá kết quả học tập, rèn luyện của học sinh
+                                THCS, THPT và GDTX.</li>
+                            <li> Thông tư 02/2023/TT-BGDĐT quy định về quy trình tổ chức và quản lý thi tốt nghiệp trung
+                                học phổ thông.</li>
+                            <li>Thông tư 03/2023/TT-BGDĐT quy định về tiêu chuẩn, nhiệm vụ và quyền hạn của nhà giáo,
+                                viên chức quản lý giáo dục.</li>
+                        </ul>
+                        Lịch thi năm học 2022-2023 <br>
+                        Kỳ thi tuyển sinh vào lớp 10 trung học phổ thông
+                        <ul>
+                            <li>Ngày thi: 26, 27 tháng 6 năm 2023</li>
+                            <li>Ngày 26 tháng 6 năm 2023: Toán, Ngữ văn</li>
+                            <li>Ngày 27 tháng 6 năm 2023: Ngoại ngữ, Khoa học tự nhiên, Khoa học xã hội</li>
+                            <li>Kỳ thi tốt nghiệp trung học phổ thông</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <div class="rcm">CÁC ỨNG DỤNG AI HỖ TRỢ VIỆC HỌC</div>
+                    <div class="image"><img src="images/chatgpt.png" alt="" width="100px" height="80px">
+                        <img src="images/poeai.jpg" alt="" width="80px" height="80px">
+                        <img src="images/bardai.jpg" alt="" width="80px" height="80px">
+                    </div>
+                    <div class="announcement">
+                        <span class="text">Dự kiến tổ chức cuộc thi Olympic toàn quốc năm 2023</span>
+                    </div>
+                </div>
             </div>
-        </div>
         </div>
     </div>
     <div id="plot">
         <div class="plot_left">
-            Tỷ lệ sinh viên tốt nghiệp có việc làm sau 1 năm ra trường tương đối cao 
-            Theo báo cáo ba công khai của Trường Đại học Công nghiệp Thành phố Hồ Chí Minh, tỷ lệ sinh viên tốt nghiệp có việc làm sau 1 năm ra trường thấp nhất là 66%, cao nhất là 100% (theo khối ngành).
-            <div>
+            Tỷ lệ sinh viên tốt nghiệp có việc làm sau 1 năm ra trường tương đối cao
+            Theo báo cáo ba công khai của Trường Đại học Công nghiệp Thành phố Hồ Chí Minh, tỷ lệ sinh viên tốt nghiệp
+            có việc làm sau 1 năm ra trường thấp nhất là 66%, cao nhất là 100% (theo khối ngành).
+            <div class="hist">
                 <img src="images/plot2.png" width="500px" height="390px">
             </div>
         </div>
         <div class="plot_right">
-            
-            Biểu đồ tròng này thể hiện tỷ lệ học sinh đạt tốt nghiệp THPT ở thành phố Hồ Chí Minh năm 2023. Có thể thấy, có 98,57% học sinh đạt tốt nghiệp, trong đó 99,16% học sinh hệ THPT đạt tốt nghiệp.
+            Biểu đồ tròng này thể hiện tỷ lệ học sinh đạt tốt nghiệp THPT ở thành phố Hồ Chí Minh năm 2023. Có thể thấy,
+            có 98,57% học sinh đạt tốt nghiệp, trong đó 99,16% học sinh hệ THPT đạt tốt nghiệp.
             <div class="hist">
                 <img src="images/plot.jpg" width="500px" height="500px">
-              </div>
+            </div>
         </div>
     </div>
-    <div class="feedback-section">
-        <h2>Nhận xét và Góp ý</h2>
-        <form class="feedback-form">
-          <div class="form-group">
-            <label for="parent-name">Họ và tên:</label>
-            <input type="text" id="parent-name" name="parent-name" required>
-          </div>
-      
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-      
-          <div class="form-group">
-            <label for="comment">Nhận xét và Góp ý:</label>
-            <textarea id="comment" name="comment" required></textarea>
-          </div>
-      
-          <input type="submit" value="Gửi">
-        </form>
-      </div>
+    <div id="footer">
+        <div class="feedback-section">
+            <h2>Nhận xét và Góp ý</h2>
+            <form class="feedback-form">
+                <div class="form-group">
+                    <label for="parent-name">Họ và tên:</label>
+                    <input type="text" id="parent-name" name="parent-name" required>
+                </div>
 
-            
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Nhận xét và Góp ý:</label>
+                    <textarea id="comment" name="comment" required></textarea>
+                </div>
+
+                <input type="submit" value="Gửi">
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="logout.js"></script>
 </body>
+
 </html>

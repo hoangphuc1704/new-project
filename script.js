@@ -1,16 +1,18 @@
 var deleteButtons = document.getElementsByClassName("delete-button");
 
-Array.from(deleteButtons).forEach(function(button) {
-  button.addEventListener("click", function() {
+Array.from(deleteButtons).forEach(function (button) {
+  button.addEventListener("click", function () {
     var row = this.parentNode.parentNode;
     row.parentNode.removeChild(row);
   });
 });
 
-document.getElementById("add-button").addEventListener("click", function() {
+document.getElementById("add-button").addEventListener("click", function () {
   var nameInput = document.getElementById("new-name");
-  var gradeInput = document.getElementById("new-grade");
-  var scoreInput = document.getElementById("new-score");
+  var MssvInput = document.getElementById("Mssv");
+  var MidscoreInput = document.getElementById("new-Mid-score");
+  var RescoreInput=document.getElementById("new-Re-score");
+  var FinalscoreInput=document.getElementById("new-Final-score")
 
   var name = nameInput.value;
   var grade = gradeInput.value;
@@ -35,11 +37,12 @@ document.getElementById("add-button").addEventListener("click", function() {
     scoreInput.value = "";
 
     var deleteButtons = document.getElementsByClassName("delete-button");
-    Array.from(deleteButtons).forEach(function(button) {
-      button.addEventListener("click", function() {
+    Array.from(deleteButtons).forEach(function (button) {
+      button.addEventListener("click", function () {
         var row = this.parentNode.parentNode;
         row.parentNode.removeChild(row);
       });
     });
   }
 });
+  
